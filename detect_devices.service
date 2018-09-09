@@ -1,0 +1,9 @@
+
+[Unit]
+Description=Scan connected wifi devices, and publish on mqtt.
+After=network.target
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/detect_devices.py
+[Install]
+WantedBy=multi-user.target
+
